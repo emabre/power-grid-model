@@ -15,14 +15,19 @@ from typing import cast as cast_type
 
 import numpy as np
 
+# [Ema] ok
 from power_grid_model import CalculationMethod, PowerGridModel
+# [Ema] ok
 from power_grid_model._core.dataset_definitions import DatasetType, _map_to_component_types
+# [Ema] ok
 from power_grid_model._core.serialization import (  # pylint: disable=unused-import
     json_deserialize,
     json_serialize,
     msgpack_deserialize,
     msgpack_serialize,
 )
+
+# [Ema] ok
 from power_grid_model._utils import (
     _extract_data_from_component_data,
     _extract_indptr,
@@ -32,6 +37,7 @@ from power_grid_model._utils import (
     is_columnar,
     is_sparse,
 )
+# [Ema] ok
 from power_grid_model.data_types import (
     BatchComponentData,
     BatchDataset,
@@ -41,7 +47,9 @@ from power_grid_model.data_types import (
     SingleComponentData,
     SingleDataset,
 )
+# [Ema] ok
 from power_grid_model.errors import PowerGridError, PowerGridSerializationError
+# [Ema] ok
 from power_grid_model.typing import ComponentAttributeMapping
 
 _DEPRECATED_FUNCTION_MSG = "This function is deprecated."
