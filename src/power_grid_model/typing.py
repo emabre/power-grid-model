@@ -19,6 +19,7 @@ from power_grid_model._core.power_grid_meta import (  # pylint: disable=unused-i
     DatasetMetaData,
     PowerGridMetaData,
 )
+# [Ema] Could I edit this import and make it private? It's not in the API
 from power_grid_model.enum import ComponentAttributeFilterOptions
 
 _ComponentAttributeMappingDict = dict[ComponentType, set[str] | list[str] | None | ComponentAttributeFilterOptions]
