@@ -36,7 +36,7 @@ from power_grid_model.data_types import (
     SingleColumnarData,
     SparseBatchColumnarData,
 )
-from power_grid_model.enum import ComponentAttributeFilterOptions
+from power_grid_model._enum import ComponentAttributeFilterOptions
 from power_grid_model._typing import ComponentAttributeMapping, _ComponentAttributeMappingDict
 
 
