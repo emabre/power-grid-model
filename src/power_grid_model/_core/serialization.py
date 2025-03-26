@@ -23,7 +23,7 @@ from power_grid_model._core.power_grid_core import (
 from power_grid_model._core.power_grid_dataset import CConstDataset, CWritableDataset
 from power_grid_model.data_types import Dataset
 from power_grid_model.errors import PowerGridSerializationError
-from power_grid_model.typing import ComponentAttributeMapping
+from power_grid_model._typing import ComponentAttributeMapping
 
 
 class SerializationType(IntEnum):
