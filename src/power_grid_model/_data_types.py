@@ -1,7 +1,36 @@
-from typing import TypeAlias, TypeVar
+from typing import TypeAlias, TypeVar, TypedDict
 
 import numpy as np
 
+
+SingleArray: TypeAlias = np.ndarray
+"""
+A single array is a one-dimensional structured numpy array containing a list of components of the same type.
+
+- Examples:
+
+    - structure: <1d-array>
+    - concrete: array([(0, 10500.0), (0, 10500.0)], dtype=power_grid_meta_data["input"]["node"].dtype)
+"""
+
+AttributeType: TypeAlias = str
+"""
+An attribute type is a string reprenting the attribute type of a specific component.
+
+- Examples:
+
+    - "id"
+    - "u_rated"
+"""
+
+
+SingleColumnarData = dict[AttributeType, SingleColumn]
+"""
+Single columnar data is a dictionary where the keys are the attribute types of the same component
+and the values are :class:`SingleColumn`.
+
+- Example: {"id": :class:`AttributeType`, "u_rated": :class:`SingleColumn`}
+"""
 
 _SingleComponentData = TypeVar("_SingleComponentData", SingleArray, SingleColumnarData)  # deduction helper
 SingleComponentData = SingleArray | SingleColumnarData
@@ -18,15 +47,12 @@ A single dataset is a dictionary where the keys are the component types and the 
 - Example: {"node": :class:`SingleArray`, "line": :class:`SingleColumnarData`}
 """
 
-AttributeType: TypeAlias = str
+ColumnarData = SingleColumnarData | BatchColumnarData
 """
-An attribute type is a string reprenting the attribute type of a specific component.
-
-- Examples:
-
-    - "id"
-    - "u_rated"
+Columnar data can be :class:`SingleColumnarData` or :class:`BatchColumnarData`.
 """
+
+
 
 _ComponentData = TypeVar("_ComponentData", SingleComponentData, BatchComponentData)  # deduction helper
 ComponentData = DataArray | ColumnarData
@@ -99,21 +125,6 @@ the same type for each scenario. Otherwise similar to :class:`SingleArray`.
 """
 
 
-SingleArray: TypeAlias = np.ndarray
-"""
-A single array is a one-dimensional structured numpy array containing a list of components of the same type.
-
-- Examples:
-
-    - structure: <1d-array>
-    - concrete: array([(0, 10500.0), (0, 10500.0)], dtype=power_grid_meta_data["input"]["node"].dtype)
-"""
-
-
-ColumnarData = SingleColumnarData | BatchColumnarData
-"""
-Columnar data can be :class:`SingleColumnarData` or :class:`BatchColumnarData`.
-"""
 
 DenseBatchColumnarData = dict[AttributeType, BatchColumn]
 """
@@ -121,15 +132,6 @@ Batch columnar data is a dictionary where the keys are the attribute types of th
 and the values are :class:`BatchColumn`.
 
 - Example: {"id": :class:`AttributeType`, "from_status": :class:`BatchColumn`}
-"""
-
-
-SingleColumnarData = dict[AttributeType, SingleColumn]
-"""
-Single columnar data is a dictionary where the keys are the attribute types of the same component
-and the values are :class:`SingleColumn`.
-
-- Example: {"id": :class:`AttributeType`, "u_rated": :class:`SingleColumn`}
 """
 
 

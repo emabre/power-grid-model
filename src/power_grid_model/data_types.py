@@ -9,7 +9,7 @@ Many data types are used throughout the power grid model project. In an attempt 
 have been defined and explained in this file.
 """
 
-from typing import TypeAlias, TypedDict, TypeVar
+from typing import TypeAlias, TypeVar
 
 import numpy as np
 
