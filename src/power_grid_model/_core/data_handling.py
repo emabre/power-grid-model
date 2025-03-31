@@ -12,7 +12,7 @@ from power_grid_model._core.dataset_definitions import ComponentType, DatasetTyp
 from power_grid_model._core.power_grid_dataset import CConstDataset, CMutableDataset
 from power_grid_model._core.power_grid_meta import initialize_array, power_grid_meta_data
 from power_grid_model._utils import process_data_filter
-from power_grid_model.data_types import Dataset, SingleDataset
+from power_grid_model._data_types import Dataset, SingleDataset
 from power_grid_model._enum import CalculationType, ComponentAttributeFilterOptions
 from power_grid_model.errors import PowerGridUnreachableHitError
 from power_grid_model._typing import ComponentAttributeMapping
