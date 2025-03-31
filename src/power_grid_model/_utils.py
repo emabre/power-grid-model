@@ -18,7 +18,7 @@ import numpy as np
 from power_grid_model._core.dataset_definitions import ComponentType, DatasetType
 from power_grid_model._core.error_handling import VALIDATOR_MSG
 from power_grid_model._core.power_grid_meta import initialize_array, power_grid_meta_data
-from power_grid_model.data_types import (
+from power_grid_model._data_types import (
     BatchColumn,
     BatchComponentData,
     BatchDataset,
@@ -38,9 +38,9 @@ from power_grid_model.data_types import (
     SinglePythonDataset,
     SparseBatchData,
 )
-from power_grid_model.enum import ComponentAttributeFilterOptions
-from power_grid_model.errors import PowerGridError
-from power_grid_model.typing import ComponentAttributeMapping, _ComponentAttributeMappingDict
+from power_grid_model._enum import ComponentAttributeFilterOptions
+from power_grid_model._errors import PowerGridError
+from power_grid_model._typing import ComponentAttributeMapping, _ComponentAttributeMappingDict
 
 
 def is_nan(data) -> bool:

@@ -3,7 +3,7 @@ from power_grid_model._core.dataset_definitions import (
     ComponentTypeVar,
 )
 
-from power_grid_model.enum import ComponentAttributeFilterOptions
+from power_grid_model._enum import ComponentAttributeFilterOptions
 
 _ComponentAttributeMappingDict = dict[ComponentType, set[str] | list[str] | None | ComponentAttributeFilterOptions]
 
