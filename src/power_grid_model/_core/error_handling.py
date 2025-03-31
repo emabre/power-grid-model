@@ -12,7 +12,7 @@ import numpy as np
 
 from power_grid_model._core.index_integer import IdxNp
 from power_grid_model._core.power_grid_core import power_grid_core as pgc
-from power_grid_model.errors import (
+from power_grid_model._errors import (
     AutomaticTapCalculationError,
     AutomaticTapInputError,
     ConflictID,
