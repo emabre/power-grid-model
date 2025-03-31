@@ -15,6 +15,29 @@ import numpy as np
 
 from power_grid_model._core.dataset_definitions import ComponentTypeVar
 
+from power_grid_model._data_types import (
+    SingleArray,
+    AttributeType,
+    SingleColumn,
+    DenseBatchArray,
+    SingleColumnarData,
+    SingleDataset,
+    BatchColumn,
+    DenseBatchColumnarData,
+    IndexPointer,
+    SparseBatchColumnarData,
+    SparseBatchArray,
+    SparseBatchData,
+    BatchColumnarData,
+    ColumnarData,
+    BatchArray,
+    BatchComponentData,
+    DataArray,
+    ComponentData,
+    Dataset,
+    DenseBatchData,
+)
+
 SparseDataComponentType: TypeAlias = str
 """
 A string representing the component type of sparse data structures.
@@ -23,50 +46,10 @@ Must be either "data" or "indptr".
 """
 
 
-SingleColumn: TypeAlias = np.ndarray
-"""
-A single column is a one-dimensional structured numpy array containing a list of the same attribute of
-multiple components of the same type.
-
-- Examples:
-
-    - structure: <1d-array>
-    - concrete:
-
-        - array([0, 1], dtype=power_grid_meta_data["input"]["node"].dtype.fields["id"][0])
-        - array([10500.0, 10500.0], dtype=power_grid_meta_data["input"]["node"].dtype.fields["u_rated"][0])
-"""
-
-BatchColumn: TypeAlias = np.ndarray
-"""
-A batch column is a two-dimensional structured numpy array containing a list of the same attribute of
-multiple components of the same type. Otherwise, similar to :class:`SingleColumn`.
-"""
-
-
-
-BatchArray = DenseBatchArray | SparseBatchArray
-"""
-A batch array is a either a :class:`DenseBatchArray` or a :class:`SparseBatchArray`.
-"""
-
-BatchColumnarData = DenseBatchColumnarData | SparseBatchColumnarData
-"""
-Batch columnar data is either a :class:`DenseBatchColumnarData` or a :class:`SparseBatchColumnarData`.
-"""
-
-DataArray = SingleArray | BatchArray
-"""
-A data array can be a :class:`SingleArray` or a :class:`BatchArray`.
-"""
-
 
 
 _BatchComponentData = TypeVar("_BatchComponentData", BatchArray, BatchColumnarData)  # deduction helper
-BatchComponentData = BatchArray | BatchColumnarData
-"""
-Batch component data can be :class:`BatchArray` or :class:`BatchColumnarData`.
-"""
+
 
 BatchDataset = dict[ComponentTypeVar, _BatchComponentData]
 """
