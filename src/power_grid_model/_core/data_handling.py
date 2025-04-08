@@ -15,7 +15,7 @@ from power_grid_model._utils import process_data_filter
 from power_grid_model._data_types import Dataset, SingleDataset
 from power_grid_model._enum import CalculationType, ComponentAttributeFilterOptions
 from power_grid_model._core.errors import PowerGridUnreachableHitError
-from power_grid_model._typing import ComponentAttributeMapping
+from power_grid_model._core.typing import ComponentAttributeMapping
 
 
 def get_output_type(*, calculation_type: CalculationType, symmetric: bool) -> DatasetType:

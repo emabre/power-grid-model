@@ -23,4 +23,4 @@ from power_grid_model._core.power_grid_meta import (  # pylint: disable=unused-i
 # [Ema] Mention that you deleted this in the PR It's documented only as part of enum, and was useful before splitting away _typing.
 # from power_grid_model.enum import ComponentAttributeFilterOptions
 
-from power_grid_model._typing import ComponentAttributeMapping  # pylint: disable=unused-import
+from power_grid_model._core.typing import ComponentAttributeMapping  # pylint: disable=unused-import

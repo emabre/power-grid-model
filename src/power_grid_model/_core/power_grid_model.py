@@ -36,7 +36,7 @@ from power_grid_model._enum import (
     TapChangingStrategy,
     _ExperimentalFeatures,
 )
-from power_grid_model._typing import ComponentAttributeMapping
+from power_grid_model._core.typing import ComponentAttributeMapping
 
 
 class PowerGridModel:

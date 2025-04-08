@@ -40,7 +40,7 @@ from power_grid_model._data_types import (
 )
 from power_grid_model._enum import ComponentAttributeFilterOptions
 from power_grid_model._core.errors import PowerGridError
-from power_grid_model._typing import ComponentAttributeMapping, _ComponentAttributeMappingDict
+from power_grid_model._core.typing import ComponentAttributeMapping, _ComponentAttributeMappingDict
 
 
 def is_nan(data) -> bool:

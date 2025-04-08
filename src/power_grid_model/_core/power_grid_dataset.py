@@ -37,7 +37,7 @@ from power_grid_model._data_types import (
     SparseBatchColumnarData,
 )
 from power_grid_model._enum import ComponentAttributeFilterOptions
-from power_grid_model._typing import ComponentAttributeMapping, _ComponentAttributeMappingDict
+from power_grid_model._core.typing import ComponentAttributeMapping, _ComponentAttributeMappingDict
 
 
 class CDatasetInfo:  # pylint: disable=too-few-public-methods
