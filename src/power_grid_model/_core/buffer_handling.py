@@ -22,7 +22,7 @@ from power_grid_model._utils import (
     is_columnar,
     is_sparse,
 )
-from power_grid_model._data_types import (
+from power_grid_model._core.data_types import (
     AttributeType,
     ComponentData,
     DenseBatchData,

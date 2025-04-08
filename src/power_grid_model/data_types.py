@@ -15,7 +15,7 @@ import numpy as np
 
 from power_grid_model._core.dataset_definitions import ComponentTypeVar
 
-from power_grid_model._data_types import (
+from power_grid_model._core.data_types import (
     SingleArray,
     AttributeType,
     SingleColumn,
