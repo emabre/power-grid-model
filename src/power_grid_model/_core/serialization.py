@@ -22,7 +22,7 @@ from power_grid_model._core.power_grid_core import (
 )
 from power_grid_model._core.power_grid_dataset import CConstDataset, CWritableDataset
 from power_grid_model._data_types import Dataset
-from power_grid_model._errors import PowerGridSerializationError
+from power_grid_model._core.errors import PowerGridSerializationError
 from power_grid_model._typing import ComponentAttributeMapping
 
 

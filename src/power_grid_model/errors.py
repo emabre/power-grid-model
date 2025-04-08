@@ -10,7 +10,7 @@ Error classes used by the power-grid-model library.
 import numpy as np
 
 
-from power_grid_model._errors import (
+from power_grid_model._core.errors import (
     PowerGridError,
     PowerGridBatchError,
     InvalidArguments,
