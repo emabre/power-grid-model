@@ -38,7 +38,7 @@ from power_grid_model._core.data_types import (
     SinglePythonDataset,
     SparseBatchData,
 )
-from power_grid_model._enum import ComponentAttributeFilterOptions
+from power_grid_model._core.enum import ComponentAttributeFilterOptions
 from power_grid_model._core.errors import PowerGridError
 from power_grid_model._core.typing import ComponentAttributeMapping, _ComponentAttributeMappingDict
 

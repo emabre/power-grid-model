@@ -11,7 +11,7 @@ Note: these enumeration match the C++ arithmetic core, so don't change the value
 
 from enum import IntEnum
 
-from power_grid_model._enum import (  # pylint: disable=unused-import
+from power_grid_model._core.enum import (  # pylint: disable=unused-import
     CalculationType,
     CalculationMethod,
     TapChangingStrategy,

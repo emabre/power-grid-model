@@ -29,7 +29,7 @@ from power_grid_model._core.index_integer import IdNp, IdxNp
 from power_grid_model._core.options import Options
 from power_grid_model._core.power_grid_core import ConstDatasetPtr, IDPtr, IdxPtr, ModelPtr, power_grid_core as pgc
 from power_grid_model._core.data_types import Dataset, SingleDataset
-from power_grid_model._enum import (
+from power_grid_model._core.enum import (
     CalculationMethod,
     CalculationType,
     ShortCircuitVoltageScaling,
