@@ -26,7 +26,7 @@ from power_grid_model._core.power_grid_core import (
     power_grid_core as pgc,
 )
 from power_grid_model._core.power_grid_meta import ComponentMetaData, DatasetMetaData, power_grid_meta_data
-from power_grid_model._utils import get_dataset_type, is_columnar, is_nan_or_equivalent, is_sparse, process_data_filter
+from power_grid_model._core.utils import get_dataset_type, is_columnar, is_nan_or_equivalent, is_sparse, process_data_filter
 from power_grid_model._core.data_types import (
     AttributeType,
     ColumnarData,
