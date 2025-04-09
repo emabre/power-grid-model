@@ -7,9 +7,6 @@ Error classes used by the power-grid-model library.
 """
 
 
-import numpy as np
-
-
 from power_grid_model._core.errors import (
     PowerGridError,
     PowerGridBatchError,
@@ -24,6 +21,7 @@ from power_grid_model._core.errors import (
     IterationDiverge,
     MaxIterationReached,
     IDNotFound,
+    InvalidID,
     InvalidMeasuredObject,
     InvalidRegulatedObject,
     IDWrongType,
@@ -36,10 +34,6 @@ from power_grid_model._core.errors import (
     PowerGridNotImplementedError,
     PowerGridUnreachableHitError,
 )
-
-
-class InvalidID(PowerGridError):
-    """An ID is invalid."""
 
 
 class ConflictID(InvalidID):

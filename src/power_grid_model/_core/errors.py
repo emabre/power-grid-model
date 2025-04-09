@@ -1,3 +1,5 @@
+import numpy as np
+
 
 class PowerGridError(RuntimeError):
     """Generic power grid error."""
@@ -53,7 +55,8 @@ class IterationDiverge(PowerGridError):
 class MaxIterationReached(IterationDiverge):
     """Maximum number of iterations reached."""
 
-
+class InvalidID(PowerGridError):
+    """An ID is invalid."""
 
 
 class IDNotFound(InvalidID):
