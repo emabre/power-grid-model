@@ -13,6 +13,7 @@ from power_grid_model._core.errors import (
     InvalidArguments,
     MissingCaseForEnumError,
     ConflictVoltage,
+    ConflictId,
     InvalidBranch,
     InvalidBranch3,
     InvalidTransformerClock,
@@ -34,7 +35,3 @@ from power_grid_model._core.errors import (
     PowerGridNotImplementedError,
     PowerGridUnreachableHitError,
 )
-
-
-class ConflictID(InvalidID):
-    """Conflicting IDs found."""

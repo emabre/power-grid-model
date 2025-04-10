@@ -75,6 +75,9 @@ class IDWrongType(InvalidID):
     """A referenced ID points to a component that cannot be referenced here."""
 
 
+class ConflictID(InvalidID):
+    """Conflicting IDs found."""
+
 class InvalidCalculationMethod(PowerGridError):
     """Invalid calculation method provided."""
 
