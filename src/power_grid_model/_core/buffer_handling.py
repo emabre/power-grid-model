@@ -15,14 +15,14 @@ from power_grid_model._core.error_handling import VALIDATOR_MSG
 from power_grid_model._core.index_integer import IdxC, IdxNp
 from power_grid_model._core.power_grid_core import IdxPtr, VoidPtr
 from power_grid_model._core.power_grid_meta import ComponentMetaData
-from power_grid_model._utils import (
+from power_grid_model._core.utils import (
     _extract_data_from_component_data,
     _extract_indptr,
     check_indptr_consistency,
     is_columnar,
     is_sparse,
 )
-from power_grid_model.data_types import (
+from power_grid_model._core.data_types import (
     AttributeType,
     ComponentData,
     DenseBatchData,

@@ -28,15 +28,15 @@ from power_grid_model._core.error_handling import PowerGridBatchError, assert_no
 from power_grid_model._core.index_integer import IdNp, IdxNp
 from power_grid_model._core.options import Options
 from power_grid_model._core.power_grid_core import ConstDatasetPtr, IDPtr, IdxPtr, ModelPtr, power_grid_core as pgc
-from power_grid_model.data_types import Dataset, SingleDataset
-from power_grid_model.enum import (
+from power_grid_model._core.data_types import Dataset, SingleDataset
+from power_grid_model._core.enum import (
     CalculationMethod,
     CalculationType,
     ShortCircuitVoltageScaling,
     TapChangingStrategy,
     _ExperimentalFeatures,
 )
-from power_grid_model.typing import ComponentAttributeMapping
+from power_grid_model._core.typing import ComponentAttributeMapping
 
 
 class PowerGridModel:
