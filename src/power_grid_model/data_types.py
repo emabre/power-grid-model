@@ -32,10 +32,12 @@ from power_grid_model._core.data_types import (
     ColumnarData,
     BatchArray,
     BatchComponentData,
+    BatchDataset,
     DataArray,
     ComponentData,
     Dataset,
     DenseBatchData,
+    BatchList,
 )
 
 SparseDataComponentType: TypeAlias = str
@@ -46,26 +48,6 @@ Must be either "data" or "indptr".
 """
 
 
-
-
-_BatchComponentData = TypeVar("_BatchComponentData", BatchArray, BatchColumnarData)  # deduction helper
-
-
-BatchDataset = dict[ComponentTypeVar, _BatchComponentData]
-"""
-A batch dataset is a dictionary where the keys are the component types and the values are :class:`BatchComponentData`
-
-- Example: {"node": :class:`DenseBatchArray`, "line": :class:`SparseBatchArray`,
-            "link": :class:`DenseBatchColumnarData`, "transformer": :class:`SparseBatchColumnarData`}
-"""
-
-BatchList = list[SingleDataset]
-"""
-A batch list is an alternative representation of a batch. It is a list of single datasets, where each single dataset
-is actually a batch. The batch list is intended as an intermediate data type, during conversions.
-
-- Example: [:class:`SingleDataset`, {"node": :class:`SingleDataset`}]
-"""
 
 NominalValue = int
 """

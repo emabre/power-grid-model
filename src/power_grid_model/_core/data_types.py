@@ -6,6 +6,7 @@ import numpy as np
 from power_grid_model._core.dataset_definitions import ComponentTypeVar
 
 
+
 SingleArray: TypeAlias = np.ndarray
 """
 A single array is a one-dimensional structured numpy array containing a list of components of the same type.
@@ -67,6 +68,14 @@ A single dataset is a dictionary where the keys are the component types and the 
 :class:`ComponentData`
 
 - Example: {"node": :class:`SingleArray`, "line": :class:`SingleColumnarData`}
+"""
+
+BatchList = list[SingleDataset]
+"""
+A batch list is an alternative representation of a batch. It is a list of single datasets, where each single dataset
+is actually a batch. The batch list is intended as an intermediate data type, during conversions.
+
+- Example: [:class:`SingleDataset`, {"node": :class:`SingleDataset`}]
 """
 
 BatchColumn: TypeAlias = np.ndarray
@@ -162,6 +171,17 @@ A batch array is a either a :class:`DenseBatchArray` or a :class:`SparseBatchArr
 BatchComponentData = BatchArray | BatchColumnarData
 """
 Batch component data can be :class:`BatchArray` or :class:`BatchColumnarData`.
+"""
+
+_BatchComponentData = TypeVar("_BatchComponentData", BatchArray, BatchColumnarData)  # deduction helper
+
+
+BatchDataset = dict[ComponentTypeVar, _BatchComponentData]
+"""
+A batch dataset is a dictionary where the keys are the component types and the values are :class:`BatchComponentData`
+
+- Example: {"node": :class:`DenseBatchArray`, "line": :class:`SparseBatchArray`,
+            "link": :class:`DenseBatchColumnarData`, "transformer": :class:`SparseBatchColumnarData`}
 """
 
 
