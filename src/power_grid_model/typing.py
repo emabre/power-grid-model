@@ -19,7 +19,9 @@ from power_grid_model._core.power_grid_meta import (  # pylint: disable=unused-i
     DatasetMetaData,
     PowerGridMetaData,
 )
-from power_grid_model._core.typing import ComponentAttributeMapping as _ComponentAttributeMapping  # pylint: disable=unused-import
+from power_grid_model._core.typing import (  # pylint: disable=unused-import
+    ComponentAttributeMapping as _ComponentAttributeMapping,
+)
 
 ComponentAttributeMapping = _ComponentAttributeMapping
 """

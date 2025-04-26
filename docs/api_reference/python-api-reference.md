@@ -32,6 +32,8 @@ are internal implementations.
 ```{eval-rst}
 .. automodule:: power_grid_model.enum
    :undoc-members:
+   :imported-members:
+   :exclude-members: IntEnum
    :show-inheritance:
 ```
 
