@@ -50,6 +50,8 @@ are internal implementations.
 
 ```{eval-rst}
 .. automodule:: power_grid_model.errors
+   :imported-members:
+   :exclude-members: np
 ```
 
 ## typing
